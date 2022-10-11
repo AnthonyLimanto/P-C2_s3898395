@@ -20,7 +20,8 @@ jobs:
   # uses: mirromutth/mysql-action@9e1c6ff16678d06d9159ebf5d1e45e59bdc562a0
       uses: mirromutth/mysql-action@v1
       with:
-        mysql password: LimLim@01
+        mysql database: 'account'
+        mysql password: 'LimLim@01'
     - uses: actions/checkout@v3
     - name: Set up JDK 18
       uses: actions/setup-java@v3
