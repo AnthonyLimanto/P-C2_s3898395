@@ -4,12 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Account_Service/pom.xml" />
-      </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
         <option value="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/pom.xml" />
-      </set>
+      </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />
