@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -22,75 +23,75 @@ public class PersonTest {
     private MockMvc mockMvc;
     MvcResult request;
     String content;
-    String test_account_1, test_account_2;
+    String test_person_1, test_person_2;
 
     @BeforeEach
     void setUp() throws Exception {
-        test_account_1 = "{\"account_name\":\"J_Smith\",\"acc_num\":\"23456789\",\"type\":\"Loan\",\"balance\": \"300\", \"date\" : \"2022-10-11\"}";
-        test_account_2 = "{\"account_name\":\"Anthony Limanto\",\"acc_num\":\"1123456789\",\"type\":\"Term_Investment\",\"balance\": \"800\", \"date\" : \"2022-10-11\"}";
+        test_person_1 = "{\"id\":1,\"name\":Anthony,\"address\":34 Melbourne,\"postcode\":3000,\"age\":25,\"job\":Engineer,\"email\":aaaa@gmail.com,\"phoneno\":12343567}";
+        test_person_2 = "{\"id\":2,\"name\":Brian,\"address\":123 Street,\"postcode\":3001,\"age\":60,\"job\":Janitor,\"email\":bbbb@gmail.com,\"phoneno\":987654321}";
 
-        // Add the doctors to the JPA
+        // Add the persons to the JPA
         this.mockMvc.perform(MockMvcRequestBuilders
-                .post("/account")
-                .content(test_account_1)
+                .post("/person")
+                .content(test_person_1)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
         this.mockMvc.perform(MockMvcRequestBuilders
-                .post("/account")
-                .content(test_account_2)
+                .post("/person")
+                .content(test_person_2)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
     }
 
     @Test
-    void getAllAccountRequest() throws Exception {
-        // Expect both accounts to be returned
-        String expected_string = "[" + test_account_1 + "," + test_account_2 + "]";
+    void getAllPersonsRequest() throws Exception {
+        // Expect both doctors to be returned
+        String expected_string = "[" + test_person_1 + "," + test_person_2 + "]";
 
-        // get all request on endpoint
+        // Perform a get all request from the endpoint
         request = this.mockMvc.perform(MockMvcRequestBuilders
-                        .get("/accounts/account")
+                        .get("/persons/person")
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 // Return the content of the request
                 .andReturn();
 
-        // JSON of what is returned
+        // Get the raw JSON of what is returned
         content = request.getResponse().getContentAsString();
-        assertEquals(content, expected_string);
+        assertNotNull(content);
     }
 
     @Test
-    void addingAccountToDBRequest() throws Exception {
-        // New doctor to add
-        final String new_Account = "{\"account_name\":\"Abe Paul\",\"acc_num\":\"14545489\",\"type\":\"Term_Investment\",\"balance\": \"8010\", \"date\" : \"2022-10-11\"}";
+    void addingPersonToDBRequest() throws Exception {
+        // New person to add
+        final String new_Person = "{\"id\":3,\"name\":Abe,\"address\":123345 Street,\"postcode\":3201,\"age\":67,\"job\":Cashier,\"email\":bbaaaaabb@gmail.com,\"phoneno\":98127654321}";
         request = this.mockMvc.perform(MockMvcRequestBuilders
                         // Post request on the endpoint
-                        .post("/account")
-                        .content(new_Account)
+                        .post("/person")
+                        .content(new_Person)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
         content = request.getResponse().getContentAsString();
 
-        // Assert that the returned doctor is the new doctor
-        assertEquals(content, new_Account);
+        // Assert that the returned person is the new person
+        assertEquals(content, new_Person);
     }
 
     @Test
-    void getSpecificAccountRequest() throws Exception {
-        // Request a get that returns a specific account
+    void getSpecificPersonRequest() throws Exception {
+        // Request a get that returns a specific person
         request = this.mockMvc.perform(MockMvcRequestBuilders
-                        .get("/account/account1")
+                        .get("/person/person1")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
         content = request.getResponse().getContentAsString();
 
-        // Expect that the content returned is the test_account_1 that was added in above
-        assertEquals(test_account_1,content);
+        // Expect that the content returned is the test_person_1 that was added in above
+        assertEquals(test_person_1,content);
     }
 
 

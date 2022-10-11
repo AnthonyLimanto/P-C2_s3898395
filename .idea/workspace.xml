@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c205a5-12bd-4eb0-958a-ed21842320a7" name="Changes" comment="adding tests for account controllers">
-      <change afterPath="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/src/test/java/com/example/pc2_personservice/PersonTest.java" afterDir="false" />
+    <list default="true" id="baf3d518-f8df-4d48-a095-9a24f0c7b08b" name="Changes" comment="tests for">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/src/test/java/com/example/pc2_personservice/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person_Service/P-C2_PersonService/Person_Service/src/test/java/com/example/pc2_personservice/PersonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -29,134 +29,117 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2FxvftgylhpmhHmxWyBGROyAKIR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Anthony/IdeaProjects/P-C2_s3898395/Person_Service/P-C2_PersonService/Person_Service/src/main/java/com/example/pc2_personservice",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "spring",
-    "spring.configuration.checksum": "86544e38c034ab655942538a5963c7c5"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb",
-      "mysql"
-    ]
+    "last_opened_file_path": "C:/Users/Anthony/IdeaProjects/P-C2_s3898395"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Anthony\IdeaProjects\P-C2_s3898395\Person_Service\P-C2_PersonService\Person_Service\src\main\java\com\example\pc2_personservice" />
-      <recent name="C:\Users\Anthony\IdeaProjects\P-C2_s3898395\Account_Service\src\main\java\com\example\pc2_accountservice" />
-      <recent name="C:\Users\Anthony\IdeaProjects\P-C2_s3898395\Person_Service" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.pc2_personservice" />
-    </key>
-  </component>
   <component name="RunManager" selected="Spring Boot.PC2PersonServiceApplication">
-    <configuration name="PC2AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="P-C2_AccountService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pc2_accountservice.PC2AccountServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pc2_accountservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pc2_accountservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pc2_accountservice.AccountTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P-C2_PersonService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pc2_personservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="PACKAGE_NAME" value="com.example.pc2_personservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pc2_personservice.PersonTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonTest.deletePersonRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="P-C2_PersonService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pc2_personservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pc2_personservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pc2_personservice.PersonTest" />
+      <option name="METHOD_NAME" value="deletePersonRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="P-C2_PersonService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="P-C2_PersonService" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="PC2PersonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
       <module name="P-C2_PersonService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pc2_personservice.PC2PersonServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.AccountTest" />
+      <item itemvalue="JUnit.PersonTest" />
+      <item itemvalue="JUnit.PersonTest.deletePersonRequest" />
+      <item itemvalue="Spring Boot.PC2PersonServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PersonTest" />
+        <item itemvalue="JUnit.PersonTest.deletePersonRequest" />
+        <item itemvalue="JUnit.AccountTest" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c0c205a5-12bd-4eb0-958a-ed21842320a7" name="Changes" comment="" />
-      <created>1665446656028</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1665446656028</updated>
-      <workItem from="1665446657269" duration="2869000" />
-      <workItem from="1665473998352" duration="12285000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial commit for person service">
-      <created>1665446863715</created>
+    <task id="LOCAL-00001" summary="fixed the tests, also now when creating table it makes a fresh table, and drops when app close, this is just to ensure test are consistent">
+      <created>1665488138499</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1665446863715</updated>
+      <updated>1665488138499</updated>
     </task>
-    <task id="LOCAL-00002" summary="dev commit">
-      <created>1665480602696</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1665480602696</updated>
-    </task>
-    <task id="LOCAL-00003" summary="account microservice">
-      <created>1665480734797</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665480734797</updated>
-    </task>
-    <task id="LOCAL-00004" summary="person microservice restapi">
-      <created>1665481961507</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1665481961507</updated>
-    </task>
-    <task id="LOCAL-00005" summary="adding tests for account controllers">
-      <created>1665485535385</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1665485535385</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit for person service" />
-    <MESSAGE value="dev commit" />
-    <MESSAGE value="account microservice" />
-    <MESSAGE value="person microservice restapi" />
-    <MESSAGE value="adding tests for account controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding tests for account controllers" />
+    <MESSAGE value="fixed the tests, also now when creating table it makes a fresh table, and drops when app close, this is just to ensure test are consistent" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the tests, also now when creating table it makes a fresh table, and drops when app close, this is just to ensure test are consistent" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
